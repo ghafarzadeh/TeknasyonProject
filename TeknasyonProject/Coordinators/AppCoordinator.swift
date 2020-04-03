@@ -27,7 +27,7 @@ class AppCoordinator: NavigationCoordinator<AppRoute> {
         switch route {
         case .popularList:
             let viewController = PopularListVC.instantiateFromNib()
-            let viewModel = popularListVMImpl(unownedRouter)
+            let viewModel = PopularListVMImpl(unownedRouter)
             viewController.bind(to: viewModel)
             return .push(viewController)
         case .popularDetail(let list):

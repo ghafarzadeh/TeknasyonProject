@@ -12,9 +12,7 @@ import RxSwift
 import XCoordinator
 import RxCocoa
 
-class popularListVMImpl: PopularListVM, PopularListVMInput, PopularListVMOutput {    
-    
-    
+class PopularListVMImpl: PopularListVM, PopularListVMInput, PopularListVMOutput {
     // MARK: - Inputs
     
     lazy var itemLoadTrigger: AnyObserver<ResultList> = itemAction.inputs

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		241ACF3D2437760B00B433D9 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 241ACF3C2437760B00B433D9 /* .swiftlint.yml */; };
 		242FC7BB243683AA00F48FB9 /* LoadingHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242FC7BA243683AA00F48FB9 /* LoadingHandler.swift */; };
 		246BAA4924361271004B3B1C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 246BAA4824361271004B3B1C /* Assets.xcassets */; };
 		246BAA4C24361271004B3B1C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 246BAA4A24361271004B3B1C /* LaunchScreen.storyboard */; };
@@ -37,7 +38,7 @@
 		24A64E2524361747002485E4 /* PopularListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A64E2424361747002485E4 /* PopularListVC.swift */; };
 		24A64E292436174F002485E4 /* PopularListVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24A64E262436174F002485E4 /* PopularListVC.xib */; };
 		24A64E2A2436174F002485E4 /* PopularListVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A64E272436174F002485E4 /* PopularListVM.swift */; };
-		24A64E2B2436174F002485E4 /* popularListVMImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A64E282436174F002485E4 /* popularListVMImpl.swift */; };
+		24A64E2B2436174F002485E4 /* PopularListVMImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A64E282436174F002485E4 /* PopularListVMImpl.swift */; };
 		24A64E2E2436177E002485E4 /* PopularListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A64E2D2436177E002485E4 /* PopularListTableViewCell.swift */; };
 		24A64E3024361A99002485E4 /* PopularService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A64E2F24361A99002485E4 /* PopularService.swift */; };
 		24A64E332436219C002485E4 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A64E322436219B002485E4 /* Result.swift */; };
@@ -67,6 +68,7 @@
 
 /* Begin PBXFileReference section */
 		018DCF579486376F3F776C4C /* Pods-TeknasyonProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeknasyonProject.release.xcconfig"; path = "Target Support Files/Pods-TeknasyonProject/Pods-TeknasyonProject.release.xcconfig"; sourceTree = "<group>"; };
+		241ACF3C2437760B00B433D9 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		242FC7BA243683AA00F48FB9 /* LoadingHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingHandler.swift; sourceTree = "<group>"; };
 		246BAA3E2436126F004B3B1C /* TeknasyonProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeknasyonProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		246BAA4824361271004B3B1C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -103,7 +105,7 @@
 		24A64E2424361747002485E4 /* PopularListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopularListVC.swift; sourceTree = "<group>"; };
 		24A64E262436174F002485E4 /* PopularListVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopularListVC.xib; sourceTree = "<group>"; };
 		24A64E272436174F002485E4 /* PopularListVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopularListVM.swift; sourceTree = "<group>"; };
-		24A64E282436174F002485E4 /* popularListVMImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = popularListVMImpl.swift; sourceTree = "<group>"; };
+		24A64E282436174F002485E4 /* PopularListVMImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopularListVMImpl.swift; sourceTree = "<group>"; };
 		24A64E2D2436177E002485E4 /* PopularListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopularListTableViewCell.swift; sourceTree = "<group>"; };
 		24A64E2F24361A99002485E4 /* PopularService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularService.swift; sourceTree = "<group>"; };
 		24A64E322436219B002485E4 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Result.swift; path = TeknasyonProject/Services/Result.swift; sourceTree = SOURCE_ROOT; };
@@ -163,6 +165,7 @@
 		246BAA352436126F004B3B1C = {
 			isa = PBXGroup;
 			children = (
+				241ACF3C2437760B00B433D9 /* .swiftlint.yml */,
 				246BAA402436126F004B3B1C /* TeknasyonProject */,
 				246BAA5524361271004B3B1C /* TeknasyonProjectTests */,
 				246BAA6024361271004B3B1C /* TeknasyonProjectUITests */,
@@ -324,7 +327,7 @@
 				24A64E2424361747002485E4 /* PopularListVC.swift */,
 				24A64E262436174F002485E4 /* PopularListVC.xib */,
 				24A64E272436174F002485E4 /* PopularListVM.swift */,
-				24A64E282436174F002485E4 /* popularListVMImpl.swift */,
+				24A64E282436174F002485E4 /* PopularListVMImpl.swift */,
 			);
 			path = PopularList;
 			sourceTree = "<group>";
@@ -376,6 +379,7 @@
 				246BAA3B2436126F004B3B1C /* Frameworks */,
 				246BAA3C2436126F004B3B1C /* Resources */,
 				BE34BB82F8009630082D16C5 /* [CP] Embed Pods Frameworks */,
+				241ACF3B243775B500B433D9 /* swiftlint */,
 			);
 			buildRules = (
 			);
@@ -472,6 +476,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				241ACF3D2437760B00B433D9 /* .swiftlint.yml in Resources */,
 				24A64E292436174F002485E4 /* PopularListVC.xib in Resources */,
 				246BAA4C24361271004B3B1C /* LaunchScreen.storyboard in Resources */,
 				246BAA4924361271004B3B1C /* Assets.xcassets in Resources */,
@@ -496,6 +501,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		241ACF3B243775B500B433D9 /* swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = swiftlint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
 		7ACC1E31F94AD00D211B846B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -603,7 +626,7 @@
 				24A64E0B2436147D002485E4 /* Presentable+Rx.swift in Sources */,
 				24A64E18243616A2002485E4 /* PopularList.swift in Sources */,
 				24A64E2A2436174F002485E4 /* PopularListVM.swift in Sources */,
-				24A64E2B2436174F002485E4 /* popularListVMImpl.swift in Sources */,
+				24A64E2B2436174F002485E4 /* PopularListVMImpl.swift in Sources */,
 				24A64E0A2436147D002485E4 /* TransitionAnimation+Defaults.swift in Sources */,
 				24A64DFB243613DE002485E4 /* Animation+Navigation.swift in Sources */,
 				24A64E092436147D002485E4 /* CGAffineTransform+InPlace.swift in Sources */,
