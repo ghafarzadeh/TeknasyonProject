@@ -33,12 +33,13 @@ class PopularListTableViewCell: UITableViewCell {
         img.layer.cornerRadius = 6
         img.contentMode = .scaleAspectFill
         
-        let viewDect = ["stackV": stackV,"img":img]
+        let viewDect = ["stackV": stackV, "img": img]
         
-        contentView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-[img(90)]-[stackV]|", options: [], metrics: nil, views: viewDect))
-        contentView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-[img(90)]-|", options: [], metrics: nil, views: viewDect))
-        contentView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-[stackV]-|", options: [], metrics: nil, views: viewDect))
-        
+        contentView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-[img(90)]-[stackV]-|", options: [], metrics: nil, views: viewDect))
+        contentView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:[img(90)]", options: [], metrics: nil, views: viewDect))
+        contentView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-0-[stackV]-0-|", options: [], metrics: nil, views: viewDect))
+        img.centerYAnchor.constraint(equalTo: contentView.centerYAnchor, constant: 0).isActive = true
+        layoutIfNeeded()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

@@ -65,6 +65,7 @@ class PopularListVC: UIViewController, BindableType {
         // MARK: - Helpers
     
     private func initData() {
+        tableView.rowHeight = 106
         self.viewModel.output.getList(page: self.paging.offset)
     }
         
