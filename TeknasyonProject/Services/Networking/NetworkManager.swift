@@ -36,7 +36,7 @@ final class RequestManager: RequestManagerProtocol {
         case serverError
         case serverUnavailable
     }
-
+    
     static let shared = RequestManager()
     private let backgroundWorkScheduler: OperationQueueScheduler
     private var headers: Headers? = nil
@@ -58,30 +58,29 @@ final class RequestManager: RequestManagerProtocol {
         urlRequest.httpMethod = HTTPMethod.get.rawValue
         httpLogger(url: url, parameters: nil, headers: urlRequest.allHTTPHeaderFields)
         return URLSession.shared.rx.response(request: urlRequest)
-                .observeOn(backgroundWorkScheduler)
-                .map { pair in
-                    switch pair.response.statusCode {
-                    case 200...300:
-                        let decodedData = T(data: pair.data)
-                        return (decodedData, nil)
-                    case 400...499:
-                        return(nil, RequestError.authorizationError)
-                    case 500...599:
-                        return(nil, RequestError.serverError)
-                    default:
-                        return(nil, RequestError.unknownError)
+            .observeOn(backgroundWorkScheduler)
+            .map { pair in
+                switch pair.response.statusCode {
+                case 200...300:
+                    let decodedData = T(data: pair.data)
+                    return (decodedData, nil)
+                case 400...499:
+                    return(nil, RequestError.authorizationError)
+                case 500...599:
+                    return(nil, RequestError.serverError)
+                default:
+                    return(nil, RequestError.unknownError)
                 }
         }
     }
     
-    
-    private func httpLogger(url:String, parameters:[String:String]?,headers: [String:String]?) {
+    private func httpLogger(url:String, parameters:[String:String]?, headers: [String:String]?) {
         print("\n__________________________________________________________________________")
-        print ( "request name : " + url + "\nParams : ")
+        print("request name : " + url + "\nParams : ")
         print(parameters ?? "no params")
         print("\nheaders : ")
-        print (headers ?? "no headers" )
+        print(headers ?? "no headers")
         print("__________________________________________________________________________")
     }
-
+    
 }

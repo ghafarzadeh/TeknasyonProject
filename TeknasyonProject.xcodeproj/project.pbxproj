@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		241ACF3D2437760B00B433D9 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 241ACF3C2437760B00B433D9 /* .swiftlint.yml */; };
 		241ACF3F2437810900B433D9 /* Paging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241ACF3E2437810900B433D9 /* Paging.swift */; };
+		241ACF412437A28700B433D9 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241ACF402437A28700B433D9 /* UIColor.swift */; };
 		242FC7BB243683AA00F48FB9 /* LoadingHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242FC7BA243683AA00F48FB9 /* LoadingHandler.swift */; };
 		246BAA4924361271004B3B1C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 246BAA4824361271004B3B1C /* Assets.xcassets */; };
 		246BAA4C24361271004B3B1C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 246BAA4A24361271004B3B1C /* LaunchScreen.storyboard */; };
@@ -42,9 +43,6 @@
 		24A64E2B2436174F002485E4 /* PopularListVMImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A64E282436174F002485E4 /* PopularListVMImpl.swift */; };
 		24A64E2E2436177E002485E4 /* PopularListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A64E2D2436177E002485E4 /* PopularListTableViewCell.swift */; };
 		24A64E3024361A99002485E4 /* PopularService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A64E2F24361A99002485E4 /* PopularService.swift */; };
-		24A64E332436219C002485E4 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A64E322436219B002485E4 /* Result.swift */; };
-		24A64E36243621D6002485E4 /* Result2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A64E35243621D6002485E4 /* Result2.swift */; };
-		24A64E38243621FB002485E4 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A64E37243621FB002485E4 /* Message.swift */; };
 		6741697DBC00284A584E366B /* Pods_TeknasyonProjectUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC85443457A9D8A36F428041 /* Pods_TeknasyonProjectUITests.framework */; };
 		69005F21A229E3D9DB1B054E /* Pods_TeknasyonProjectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5817A5C99F3FBF9E2E3B5EEF /* Pods_TeknasyonProjectTests.framework */; };
 		EC1C53B949B760D57955DBBB /* Pods_TeknasyonProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AB8B458A2A97D865AE39AD1 /* Pods_TeknasyonProject.framework */; };
@@ -71,6 +69,7 @@
 		018DCF579486376F3F776C4C /* Pods-TeknasyonProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeknasyonProject.release.xcconfig"; path = "Target Support Files/Pods-TeknasyonProject/Pods-TeknasyonProject.release.xcconfig"; sourceTree = "<group>"; };
 		241ACF3C2437760B00B433D9 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		241ACF3E2437810900B433D9 /* Paging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paging.swift; sourceTree = "<group>"; };
+		241ACF402437A28700B433D9 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		242FC7BA243683AA00F48FB9 /* LoadingHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingHandler.swift; sourceTree = "<group>"; };
 		246BAA3E2436126F004B3B1C /* TeknasyonProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeknasyonProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		246BAA4824361271004B3B1C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -110,9 +109,6 @@
 		24A64E282436174F002485E4 /* PopularListVMImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopularListVMImpl.swift; sourceTree = "<group>"; };
 		24A64E2D2436177E002485E4 /* PopularListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopularListTableViewCell.swift; sourceTree = "<group>"; };
 		24A64E2F24361A99002485E4 /* PopularService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularService.swift; sourceTree = "<group>"; };
-		24A64E322436219B002485E4 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Result.swift; path = TeknasyonProject/Services/Result.swift; sourceTree = SOURCE_ROOT; };
-		24A64E35243621D6002485E4 /* Result2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Result2.swift; path = TeknasyonProject/Services/Result2.swift; sourceTree = SOURCE_ROOT; };
-		24A64E37243621FB002485E4 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		4B108764F3A5D6B1EBD28837 /* Pods-TeknasyonProjectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeknasyonProjectTests.release.xcconfig"; path = "Target Support Files/Pods-TeknasyonProjectTests/Pods-TeknasyonProjectTests.release.xcconfig"; sourceTree = "<group>"; };
 		4E08BB37DCBF102D26E95362 /* Pods-TeknasyonProjectUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeknasyonProjectUITests.release.xcconfig"; path = "Target Support Files/Pods-TeknasyonProjectUITests/Pods-TeknasyonProjectUITests.release.xcconfig"; sourceTree = "<group>"; };
 		5817A5C99F3FBF9E2E3B5EEF /* Pods_TeknasyonProjectTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TeknasyonProjectTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -271,6 +267,7 @@
 				24A64E072436147D002485E4 /* Presentable+Rx.swift */,
 				24A64E062436147D002485E4 /* TransitionAnimation+Defaults.swift */,
 				24A64E042436147D002485E4 /* Transitions.swift */,
+				241ACF402437A28700B433D9 /* UIColor.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -346,8 +343,6 @@
 		24A64E312436218D002485E4 /* GeneralModel */ = {
 			isa = PBXGroup;
 			children = (
-				24A64E322436219B002485E4 /* Result.swift */,
-				24A64E37243621FB002485E4 /* Message.swift */,
 			);
 			path = GeneralModel;
 			sourceTree = "<group>";
@@ -355,7 +350,6 @@
 		24A64E34243621CB002485E4 /* Response */ = {
 			isa = PBXGroup;
 			children = (
-				24A64E35243621D6002485E4 /* Result2.swift */,
 			);
 			path = Response;
 			sourceTree = "<group>";
@@ -616,15 +610,14 @@
 				24A64E2E2436177E002485E4 /* PopularListTableViewCell.swift in Sources */,
 				24A64DFA243613DE002485E4 /* Animation+Swirl.swift in Sources */,
 				24A64DFC243613DE002485E4 /* Animation+Fade.swift in Sources */,
+				241ACF412437A28700B433D9 /* UIColor.swift in Sources */,
 				24A64E3024361A99002485E4 /* PopularService.swift in Sources */,
 				24A64E082436147D002485E4 /* Transitions.swift in Sources */,
 				2480688224373D2D0035C7BD /* PopularDetailVM.swift in Sources */,
-				24A64E332436219C002485E4 /* Result.swift in Sources */,
 				2480687F24373B9D0035C7BD /* PopularDetailVC.swift in Sources */,
 				24A64E2524361747002485E4 /* PopularListVC.swift in Sources */,
 				24A64E1624361528002485E4 /* BindableType.swift in Sources */,
 				2480688424373D4D0035C7BD /* PopularDetailVMImpl.swift in Sources */,
-				24A64E38243621FB002485E4 /* Message.swift in Sources */,
 				242FC7BB243683AA00F48FB9 /* LoadingHandler.swift in Sources */,
 				24A64E0B2436147D002485E4 /* Presentable+Rx.swift in Sources */,
 				24A64E18243616A2002485E4 /* PopularList.swift in Sources */,
@@ -642,7 +635,6 @@
 				24A64E12243614F1002485E4 /* NibIdentifiable.swift in Sources */,
 				24A64E1F243616EA002485E4 /* Modelable.swift in Sources */,
 				241ACF3F2437810900B433D9 /* Paging.swift in Sources */,
-				24A64E36243621D6002485E4 /* Result2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -813,6 +805,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 85ZPF97TET;
 				INFOPLIST_FILE = TeknasyonProject/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -832,6 +825,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 85ZPF97TET;
 				INFOPLIST_FILE = TeknasyonProject/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

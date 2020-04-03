@@ -18,14 +18,6 @@ struct ResultList: Codable {
     var poster_path, backdrop_path: String?
     var original_language, overview: String?
 
-    init() {
-        originalName = ""
-        name = ""
-        popularity = 0.0
-        voteCount = 0
-        id = 0
-        voteAverage = 0
-    }
     enum CodingKeys: String, CodingKey {
         case originalName = "original_name"
         case name, popularity

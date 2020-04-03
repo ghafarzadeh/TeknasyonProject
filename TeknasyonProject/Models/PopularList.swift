@@ -11,19 +11,12 @@ import Foundation
 struct PopularList: Codable {
     var page, totalResults, totalPages: Int?
     var results: [ResultList]?
-//    var status_code: Int?
-//    var status_message: String?
-//    var success: Bool?
     
-
     private enum CodingKeys: String, CodingKey {
         case page
         case totalResults = "total_results"
         case totalPages = "total_pages"
         case results
-//        case statusCode = "status_code"
-//        case statusMessage = "status_message"
-//        case success = "success"
     }
 }
 
@@ -31,7 +24,6 @@ extension PopularList: Modelable {
     init(data: Data) {
         do {
             let map = try JSONDecoder().decode(PopularList.self, from: data)
-            print("")
             self = map
         }
         catch {

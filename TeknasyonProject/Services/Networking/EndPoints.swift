@@ -12,7 +12,6 @@ enum EndPoints {
     case baseUrl
     case popular(key: String, page: Int)
     case baseUrlPic(size: Int)
-
     
     var path: String {
         switch self {

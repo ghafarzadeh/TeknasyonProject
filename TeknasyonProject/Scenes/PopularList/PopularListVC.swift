@@ -35,8 +35,12 @@ class PopularListVC: UIViewController, BindableType {
             
             viewModel.output.listItems
                 .bind(to: tableView.rx.items(cellIdentifier: cellIdentifier, cellType: PopularListTableViewCell.self)) { row, element, cell in
-                    cell.TitlePop.text = element.name
-                    cell.RatePop.text = String(describing: element.popularity)
+                    let Name: NSMutableAttributedString = NSMutableAttributedString(string: element.name, attributes: PopularDetailVC.titleParameters)
+                    cell.TitlePop.attributedText = Name
+                    
+                    let vote: NSMutableAttributedString = NSMutableAttributedString(string: "Vote Average: ", attributes: PopularDetailVC.titleParameters)
+                    vote.append(NSAttributedString(string: String(describing: element.voteAverage), attributes: PopularDetailVC.titleParameters))
+                    cell.RatePop.attributedText = vote
                     cell.selectionStyle = .none
                     cell.img.sd_setImage(with: URL(string: EndPoints.baseUrlPic(size: 200).path + (element.backdrop_path ?? "")))
                 }

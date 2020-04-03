@@ -31,7 +31,6 @@ class PopularListVMImpl: PopularListVM, PopularListVMInput, PopularListVMOutput 
     private lazy var itemAction = Action<ResultList, Void> { [unowned self] item in
         Observable<Void>.create {observer in
             observer.on(.next({
-                print("")
                 self.router.trigger(.popularDetail(list: item))
                 }()))
             observer.on(.completed)
@@ -55,7 +54,6 @@ class PopularListVMImpl: PopularListVM, PopularListVMInput, PopularListVMOutput 
                self.isLoading = false
                self.listItems.accept(self.popularList)
             }
-        
         }
     }
     

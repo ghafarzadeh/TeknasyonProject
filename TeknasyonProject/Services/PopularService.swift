@@ -23,12 +23,11 @@ var key: String {
 }
 
 class PopularService: PopularServiceProtocol {
-
+    
     private let requestManager = RequestManager.shared
     
     func loadProfile(page: Int) -> Observable<PopularLoaded> {
         return self.requestManager.rxget(url: EndPoints.popular(key: key, page: page).path) as
             Observable<PopularLoaded>
     }
-
 }

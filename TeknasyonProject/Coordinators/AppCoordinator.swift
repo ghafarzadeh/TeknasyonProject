@@ -14,15 +14,15 @@ enum AppRoute: Route {
 }
 
 class AppCoordinator: NavigationCoordinator<AppRoute> {
-
+    
     // MARK: Initialization
-
+    
     init() {
         super.init(initialRoute: .popularList)
     }
-
+    
     // MARK: Overrides
-
+    
     override func prepareTransition(for route: AppRoute) -> NavigationTransition {
         switch route {
         case .popularList:
@@ -35,7 +35,6 @@ class AppCoordinator: NavigationCoordinator<AppRoute> {
             let viewModel = PopularDetailVMImpl(unownedRouter, list: list)
             viewController.bind(to: viewModel)
             return .push(viewController)
-        
         }
     }
 }
