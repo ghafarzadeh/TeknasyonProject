@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		241ACF3D2437760B00B433D9 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 241ACF3C2437760B00B433D9 /* .swiftlint.yml */; };
+		241ACF3F2437810900B433D9 /* Paging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241ACF3E2437810900B433D9 /* Paging.swift */; };
 		242FC7BB243683AA00F48FB9 /* LoadingHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242FC7BA243683AA00F48FB9 /* LoadingHandler.swift */; };
 		246BAA4924361271004B3B1C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 246BAA4824361271004B3B1C /* Assets.xcassets */; };
 		246BAA4C24361271004B3B1C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 246BAA4A24361271004B3B1C /* LaunchScreen.storyboard */; };
@@ -69,6 +70,7 @@
 /* Begin PBXFileReference section */
 		018DCF579486376F3F776C4C /* Pods-TeknasyonProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeknasyonProject.release.xcconfig"; path = "Target Support Files/Pods-TeknasyonProject/Pods-TeknasyonProject.release.xcconfig"; sourceTree = "<group>"; };
 		241ACF3C2437760B00B433D9 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		241ACF3E2437810900B433D9 /* Paging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paging.swift; sourceTree = "<group>"; };
 		242FC7BA243683AA00F48FB9 /* LoadingHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingHandler.swift; sourceTree = "<group>"; };
 		246BAA3E2436126F004B3B1C /* TeknasyonProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeknasyonProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		246BAA4824361271004B3B1C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -298,6 +300,7 @@
 				24A64E1424361528002485E4 /* BindableType.swift */,
 				24A64E10243614F1002485E4 /* NibIdentifiable.swift */,
 				242FC7BA243683AA00F48FB9 /* LoadingHandler.swift */,
+				241ACF3E2437810900B433D9 /* Paging.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -638,6 +641,7 @@
 				24A64E022436145F002485E4 /* AppCoordinator.swift in Sources */,
 				24A64E12243614F1002485E4 /* NibIdentifiable.swift in Sources */,
 				24A64E1F243616EA002485E4 /* Modelable.swift in Sources */,
+				241ACF3F2437810900B433D9 /* Paging.swift in Sources */,
 				24A64E36243621D6002485E4 /* Result2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

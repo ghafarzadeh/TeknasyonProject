@@ -13,6 +13,15 @@ import XCoordinator
 import RxCocoa
 
 class PopularListVMImpl: PopularListVM, PopularListVMInput, PopularListVMOutput {
+    
+    var listItems: BehaviorRelay<[ResultList]> = BehaviorRelay(value: [])
+    
+    var isLoading: Bool = false
+    var popularList: [ResultList] = []
+        
+    let popularService = PopularService()
+    private let disposeBag = DisposeBag()
+    
     // MARK: - Inputs
     
     lazy var itemLoadTrigger: AnyObserver<ResultList> = itemAction.inputs
@@ -31,29 +40,25 @@ class PopularListVMImpl: PopularListVM, PopularListVMInput, PopularListVMOutput 
     }
     
     // MARK: - Outputs
-    
-    lazy var items: Observable<[ResultList]> = getList()    
-    
-    let popularService = PopularService()
-    private let disposeBag = DisposeBag()
-    
-    func getList() -> Observable<[ResultList]> {
-        return Observable.create { (observer: AnyObserver<[ResultList]>) -> Disposable in
-            
-            self.popularService.loadProfile().bind { [unowned self] (response, error) in
-                 if let err = error {
-                     observer.onError(err)
-                     return
-                 }
-                 if let res = response  {
-                    observer.onNext(res.results ?? [ResultList()])
-                 }
-             
-             }
-            return Disposables.create()
+
+    func getList(page: Int) {
+        self.popularService.loadProfile(page: page).bind { [unowned self] (response, error) in
+            if error != nil {
+                return
+            }
+            if let res = response {
+               if page == 1 {
+                   self.popularList = res.results!
+               } else {
+                   self.popularList.append(contentsOf: res.results!)
+               }
+               self.isLoading = false
+               self.listItems.accept(self.popularList)
+            }
+        
         }
     }
-
+    
     // MARK: - Private
     
   //  private var selectableType: PopularList//selectedModel

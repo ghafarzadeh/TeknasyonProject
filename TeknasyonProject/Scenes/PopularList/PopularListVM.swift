@@ -9,13 +9,17 @@
 import Foundation
 import RxSwift
 import XCoordinator
+import RxCocoa
 
 protocol PopularListVMInput {
     var itemLoadTrigger: AnyObserver<ResultList> { get }
 }
 
 protocol PopularListVMOutput {
-    var items: Observable<[ResultList]> { get }
+    var listItems: BehaviorRelay<[ResultList]> { get }
+    var popularList: [ResultList] { get set}
+    var isLoading: Bool { get set}
+    func getList(page: Int)
 }
 
 protocol PopularListVM {

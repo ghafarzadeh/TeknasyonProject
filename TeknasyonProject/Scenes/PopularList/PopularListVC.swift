@@ -13,12 +13,11 @@ import UIKit
 import SDWebImage
 
 class PopularListVC: UIViewController, BindableType {
-   var viewModel: PopularListVM!
-
+    var viewModel: PopularListVM!
+    private let paging = Paging(limit: 20)
     // MARK: - Views
     
     @IBOutlet private var tableView: UITableView!
-    
     
     private let disposeBag = DisposeBag()
     private let cellIdentifier = String(describing: PopularListTableViewCell.self)
@@ -27,19 +26,19 @@ class PopularListVC: UIViewController, BindableType {
         super.viewDidLoad()
         configureTableViewCell()
         configureNavBar()
-        
+        initData()
     }
       
         // MARK: - BindableType
     
         func bindViewModel() {
-            viewModel.output.items
+            
+            viewModel.output.listItems
                 .bind(to: tableView.rx.items(cellIdentifier: cellIdentifier, cellType: PopularListTableViewCell.self)) { row, element, cell in
                     cell.TitlePop.text = element.name
                     cell.RatePop.text = String(describing: element.popularity)
                     cell.selectionStyle = .none
                     cell.img.sd_setImage(with: URL(string: EndPoints.baseUrlPic(size: 200).path + (element.backdrop_path ?? "")))
-                    
                 }
                 .disposed(by: disposeBag)
             
@@ -47,22 +46,29 @@ class PopularListVC: UIViewController, BindableType {
                 self?.viewModel.input.itemLoadTrigger.onNext(item)
             }).disposed(by: disposeBag)
             
-            self.tableView.rx.contentOffset
-                .flatMap { (offset) -> Observable<Void> in
-                    true ? Observable.just(Void()): Observable.empty()
-
-            }
-            
-            
+            tableView.rx.willDisplayCell.subscribe(onNext: { cell, indexPath in
+                let threshold = self.paging.threshold + indexPath.row
+                
+                if threshold == self.viewModel.output.popularList.count && !self.viewModel.output.isLoading {
+                    self.paging.offset += 1
+                    self.viewModel.output.getList(page: self.paging.offset)
+                }
+                
+            }).disposed(by: disposeBag)
+        
         }
     
         // MARK: - Helpers
+    
+    private func initData() {
+        self.viewModel.output.getList(page: self.paging.offset)
+    }
         
         private func configureTableViewCell() {
             tableView.register(PopularListTableViewCell.self, forCellReuseIdentifier: cellIdentifier)
         }
         
         private func configureNavBar() {
-            title = ""
+            title = "Popular List"
         }
 }
